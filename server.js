@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get("/get-location", async (req, res) => {
     try {
-        const response = await axios.get("https://ipapi.co/json/");
+        const response = await axios.get("https://ipinfo.io/json?token=350711f9584ea2");
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: "Failed to fetch location" });
